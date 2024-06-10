@@ -1,3 +1,5 @@
+import sys
+
 def deduplicating_fasta_sequences(input_file, output_file):
     # Read the input FASTA file
     with open(input_file, 'r') as file:
@@ -5,7 +7,7 @@ def deduplicating_fasta_sequences(input_file, output_file):
 
     # Initialize variables
     fasta_dict = {}
-    current_sequence = []  # Changed to a list
+    current_sequence = []
     current_sequence_id = ''
 
     # Process the lines
@@ -27,6 +29,11 @@ def deduplicating_fasta_sequences(input_file, output_file):
         for sequence_id, sequence in fasta_dict.items():
             file.write(f'>{sequence_id}\n{sequence}\n')
 
-# Example usage
-#deduplicating_fasta_sequences('input.fasta', 'output.fasta')
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: python deduplicate_fasta.py <input_file> <output_file>")
+    else:
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
+        deduplicating_fasta_sequences(input_file, output_file)
 
