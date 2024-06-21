@@ -1,41 +1,36 @@
 #!/usr/bin/env python3
 
-def extract_sequences(protein_ids_file, fasta_file, output_file):
-    # Read protein IDs into a set for fast lookup
-    with open(protein_ids_file, 'r') as ids_file:
-        protein_ids = set(line.strip() for line in ids_file)
+import argparse
+import os
+from Bio import SeqIO
 
-    # Initialize variables to track sequence extraction
-    current_protein_id = None
-    found_protein_id = False
-    output_lines = []
+def extract_sequences(ids_file, fasta_file, output_file):
+    # Read IDs from the input file
+    with open(ids_file, 'r') as f:
+        protein_ids = [line.strip() for line in f.readlines()]
 
-    # Iterate through the FASTA file and extract matching sequences
+    # Extract sequences from the FASTA file
+    sequences = []
     with open(fasta_file, 'r') as fasta:
-        for line in fasta:
-            if line.startswith('>'):
-                # Check if previous protein ID was in our list
-                if current_protein_id and found_protein_id:
-                    output_lines.append('\n')
-                current_protein_id = line.strip()[1:]  # Extract protein ID from header
-                found_protein_id = current_protein_id in protein_ids
-            if found_protein_id:
-                output_lines.append(line)
+        fasta_sequences = SeqIO.parse(fasta, 'fasta')
+        for record in fasta_sequences:
+            if record.id in protein_ids:
+                sequences.append(record)
 
-    # Write extracted sequences to the output file
-    with open(output_file, 'w') as output:
-        output.writelines(output_lines)
+    # Write sequences to the output file in FASTA format
+    with open(output_file, 'w') as out:
+        for seq in sequences:
+            out.write(f'>{seq.id}\n{seq.seq}\n')
+
+def main():
+    parser = argparse.ArgumentParser(description="Extract sequences from a FASTA file based on IDs.")
+    parser.add_argument("ids_file", type=str, help="File containing IDs to extract")
+    parser.add_argument("fasta_file", type=str, help="FASTA file to search for sequences")
+    parser.add_argument("output_file", type=str, help="Output file to write extracted sequences")
+
+    args = parser.parse_args()
+
+    extract_sequences(args.ids_file, args.fasta_file, args.output_file)
 
 if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) != 4:
-        print("Usage: python extract_sequences.py <protein_ids_file> <fasta_file> <output_file>")
-        sys.exit(1)
-
-    protein_ids_file = sys.argv[1]
-    fasta_file = sys.argv[2]
-    output_file = sys.argv[3]
-
-    extract_sequences(protein_ids_file, fasta_file, output_file)
-    print(f"Sequences extracted and saved to {output_file}")
+    main()
