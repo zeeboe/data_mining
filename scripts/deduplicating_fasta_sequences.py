@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 
 def deduplicating_fasta_sequences(input_file, output_file):
