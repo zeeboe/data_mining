@@ -25,3 +25,17 @@ def extract_sequences(protein_ids_file, fasta_file, output_file):
     # Write extracted sequences to the output file
     with open(output_file, 'w') as output:
         output.writelines(output_lines)
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) != 4:
+        print("Usage: python extract_sequences.py <protein_ids_file> <fasta_file> <output_file>")
+        sys.exit(1)
+
+    protein_ids_file = sys.argv[1]
+    fasta_file = sys.argv[2]
+    output_file = sys.argv[3]
+
+    extract_sequences(protein_ids_file, fasta_file, output_file)
+    print(f"Sequences extracted and saved to {output_file}")
