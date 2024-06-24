@@ -20,7 +20,7 @@ def main():
     output_dir = args.scripts_dir
 
     # Step 1: Run the AWK command to extract IDs
-    sequential_hits_file = os.path.join(home_dir, f'{query_file}_sequential_hits.csv')
+    sequential_hits_file = os.path.join(home_dir, f'{query_file}_sequential_clean_hits.csv')
     sequential_hits_ids_file = os.path.join(home_dir, f'{query_file}_sequential_hits_ids.txt')
     
     try:
