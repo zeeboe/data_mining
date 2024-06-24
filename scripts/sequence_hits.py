@@ -30,7 +30,7 @@ def main():
     deduplicated_fasta = os.path.join(home_dir, f"{query}_sequences_deduplicated.fasta")
     msa_file = os.path.join(home_dir, f"{query}_msa")
     hmm_profile = os.path.join(home_dir, f"{query}_hmm")
-    sequential_hits = os.path.join(home_dir, f"{query}_sequential_hits.csv")
+    sequential_hits = os.path.join(home_dir, f"{query}_sequential_hits_table")
 
     # Check if the input file exists
     if os.path.isfile(fasta_sequences_file):
