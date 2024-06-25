@@ -1,8 +1,9 @@
 ## (ﾉ◕ヮ◕)ﾉ *:✧ MINING LARGE DATA SETS  ✧*
 
  For anyone who is completely new: Welcome! Coding is hard, but maybe this will help.
+ This repository can be used to find sequences in a large database that are sequentially similar to a query
  
- This commands.sh notebook has the commands that will search for sequentially similar entries of a query in a large data base.
+ The commands.sh notebook has the commands that need to be executed to find sequentially similar hits, BUT before running them follow the instructions below.
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ### Preparing all of the variables
