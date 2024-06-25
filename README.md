@@ -5,10 +5,8 @@
  The input is a list of FASTA sequences from known organisms and the output is a csv of sequentially similar hits that can be read as a data frame in python
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Preparing all of the variables
+# Preparing all of the variables
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-# Before we start running our commands, set up the following:
 
  1. Create script directory where you can pull from my script repository on github : https://github.com/zeeboe/data_mining.git
 
