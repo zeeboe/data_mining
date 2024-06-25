@@ -1,4 +1,4 @@
-# (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ *:･ﾟ✧*:･ﾟ✧ *:･ﾟ✧ MINING LARGE DATA SETS  ✧*
+# (ﾉ◕ヮ◕)ﾉ *: MINING LARGE DATA SETS  ✧*
 
  For anyone who is completely new: Welcome! Coding is hard, but maybe this will help.
  
