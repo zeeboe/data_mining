@@ -1,7 +1,7 @@
-(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ *:･ﾟ✧*:･ﾟ✧ *:･ﾟ✧ MINING LARGE DATA SETS  ✧ﾟ･:* ✧ﾟ･:* ✧ﾟ･:*ヽ(◕ヮ◕ヽ)
+(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ *:･ﾟ✧*:･ﾟ✧ *:･ﾟ✧ MINING LARGE DATA SETS  ✧*
 
- For anyone who is completely new: Welcome! Coding is hard, but maybe this will help.
- This script will search for sequentially similar entries to a query in a large data base
+ For anyone who is completely new: Welcome! Coding is hard, but maybe this will help. /n
+ This script will search for sequentially similar entries to a query in a large data base /n
  The input is a list of FASTA sequences from known organisms and the output is a csv of sequentially similar hits that can be read as a data frame in python
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
