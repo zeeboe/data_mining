@@ -13,7 +13,7 @@ class Color:
 
 def run_awk_command(home_dir, query_file):
     # Run the awk command to extract IDs from the CSV file
-    sequential_hits_file = os.path.join(home_dir, f'{query_file}_sequential_clean_hits.csv')
+    sequential_hits_file = os.path.join(home_dir, f'{query_file}_sequential_processed_hits.csv')
     sequential_hits_ids_file = os.path.join(home_dir, f'{query_file}_sequential_hits_ids.txt')
     
     awk_command = f"awk -F, 'NR > 1 {{ print $1 }}' {sequential_hits_file} > {sequential_hits_ids_file}"
