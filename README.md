@@ -2,7 +2,7 @@
 
  For anyone who is completely new: Welcome! Coding is hard, but maybe this will help.
  
- This commands notebook will give commands that will search for sequentially similar entries of a query in a large data base.
+ This commands.sh notebook has the commands that will search for sequentially similar entries of a query in a large data base.
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ### Preparing all of the variables
@@ -18,4 +18,4 @@
 
 Acknowledgements : To anyone who ever helped make the muscle, hmmbuild, hmmsearch commands, Daryl Barth, and Rachael Cox who are great and taught me how to suffer for my art (this code).
 
-### (ﾉ◕ヮ◕)ﾉ *:✧ HAPPY MINING  ✧*
+#### (ﾉ◕ヮ◕)ﾉ *:✧ HAPPY MINING  ✧*
