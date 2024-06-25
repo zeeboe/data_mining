@@ -20,8 +20,8 @@ def main():
     args = parser.parse_args()
 
     # Set variables from arguments
-    query = args.query
     database = args.database
+    query = args.query
     script_dir = args.script_dir
     home_dir = args.home_dir
 
@@ -31,6 +31,7 @@ def main():
     msa_file = os.path.join(home_dir, f"{query}_msa")
     hmm_profile = os.path.join(home_dir, f"{query}_hmm")
     sequential_hits = os.path.join(home_dir, f"{query}_sequential_hits.csv")
+    processed_sequential_hits = os.path.join(home_dir, f"{query}_sequential_processed_hits.csv")
 
     # Check if the input file exists
     if os.path.isfile(fasta_sequences_file):
@@ -71,11 +72,21 @@ def main():
         result = subprocess.run(["hmmsearch", "-o", "/dev/null", "--cpu", "6", "-E", "0.00005", "--tblout", sequential_hits, hmm_profile, database])
         if result.returncode == 0:
             print("HMMSEARCH WORKED (๑˃ᴗ˂)ﻭ")
-            print("Congratulations! You done it! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧")
         else:
             print("HMMsearch command isn't working (╯°□°）╯")
     else:
         print(f"Input file not found: {hmm_profile}")
+
+    #Search through a database to find sequentially similar hits
+    if os.path.isfile(sequential_hits):
+        result = subprocess.run(["python3", os.path.join(script_dir, "process_sequence_hits.py"), query])
+        if result.returncode == 0:
+            print("SEQUENTIAL HITS PROCESSING WORKED (๑˃ᴗ˂)ﻭ")
+            print("Congratulations! You done it! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧")
+        else:
+            print("Sequential hits file was not processed (╯°□°）╯")
+    else:
+        print(f"Input file not found: {sequential_hits}")
 
 if __name__ == "__main__":
     main()
