@@ -1,10 +1,8 @@
-# (ﾉ◕ヮ◕)ﾉ *: MINING LARGE DATA SETS  ✧*
+# (ﾉ◕ヮ◕)ﾉ *:✧ MINING LARGE DATA SETS  ✧*
 
  For anyone who is completely new: Welcome! Coding is hard, but maybe this will help.
  
- This script will search for sequentially similar entries to a query in a large data base.
- 
-The input is a list of FASTA sequences from known organisms and the output is a csv of sequentially similar hits that can be read as a data frame in python
+ This commands notebook will give commands that will search for sequentially similar entries of a query in a large data base.
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # Preparing all of the variables
@@ -17,3 +15,7 @@ The input is a list of FASTA sequences from known organisms and the output is a 
  3. Create a database.fasta file that has all of the sequences in the database in FASTA format
 
  4. Create a sequences.fasta file that is a list of FASTA sequences similar to the query sequence from various organisms. Name this fasta file with the naming convention 'query_sequences.fasta' (query can be whatever you choose to name the query, the important part is the "_sequences.fasta")
+
+Acknowledgements : To anyone who ever helped make the muscle, hmmbuild, hmmsearch commands, Daryl Barth, and Rachael Cox who are great and taught me how to suffer for my art (this code).
+
+# (ﾉ◕ヮ◕)ﾉ *:✧ HAPPY MINING  ✧*
