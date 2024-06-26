@@ -17,6 +17,6 @@
 
  4. Create a sequences.fasta file that is a list of FASTA sequences similar to the query sequence from various organisms. Name this fasta file with the naming convention 'query_sequences.fasta' (query can be whatever you choose to name the query, the important part is the "_sequences.fasta")
 
-Acknowledgements : To anyone who ever helped make the muscle, hmmbuild, hmmsearch commands, Daryl Barth, and Rachael Cox who are great and taught me how to suffer for my art (this code).
+Acknowledgements : To anyone who ever helped make the muscle, hmmbuild, hmmsearch commands. And to Daryl Barth, and Rachael Cox who are great and taught me how to suffer for my art (this code).
 
 #### (ﾉ◕ヮ◕)ﾉ *:✧ HAPPY MINING  ✧*
