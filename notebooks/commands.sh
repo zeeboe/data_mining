@@ -15,7 +15,7 @@ python3 script_dir/sequence_hits.py database.fasta query script_dir home_dir
 # this script will generate a '{query}_hits_sequences.fasta' file that is populated by sequences of sequentially similar hits to the query
 
 # run the following command in the terminal
-python3 extract_sequences.py query /path/to/home /path/to/database.fasta
+python3 script_dir/extract_sequences.py query home_dir database.fasta
 
 
 # ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ 
