@@ -5,7 +5,7 @@
 # this script will generate a '{query}_sequential_processed_hits.csv' file that is populated by sequentially similar hits and can be easily read as a dataframe
 # OPTIONAL: Filter the resulting data frame before extracting sequences of interest
 
-python3 sequence_hits.py query path/to/scripts /path/to/home database.fasta
+python3 script_dir/sequence_hits.py database.fasta query script_dir home_dir
 
 
 # ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ ♡ 
